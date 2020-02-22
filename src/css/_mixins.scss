@@ -1,0 +1,22 @@
+@mixin width_height_padding($width, $height, $padding: false, $side: false, $space: 0, ){
+
+    width: $width;
+    height: $height; 
+
+    @if $padding{
+
+        padding: $padding;
+
+    }@else if $side{
+
+        padding-#{$side}: #{$space};
+
+    }@else{
+
+
+    }
+   
+    
+
+
+}

@@ -1,0 +1,380 @@
+@import "~normalize-scss/sass/normalize/_import-now.scss";
+ // your style goes here
+
+@import '_variables.scss';
+@import '_placeholders.scss';
+@import '_mixins.scss';
+
+body{
+    overflow-x: hidden;
+}
+
+.container{
+
+    width: 100%;
+    
+    @extend %center-margin;
+  
+    #headerInner{
+        // width: 85%;
+        // height: 5%;
+        // padding-top: 20px;
+        @include width_height_padding(85%, 5% , false, 'top' , 20px);
+
+        display: flex;
+        justify-content: space-between;
+        @extend %center-margin;
+    }
+
+    #menu-icon{
+        height: 30px;
+    }
+
+    .aside-links{
+
+        padding: 20px 30px;
+        color: $grey;
+
+        ul{
+            margin-top: 70px;
+            padding: 0;
+            font-size: $desktop-heading3;
+
+            li{
+                margin-bottom: 10px;
+            }
+            
+            a{
+                text-decoration: none;
+                color: $grey;
+            }
+        }
+
+    }
+
+    .section1{
+        width: 100%;
+        height: 100vh;
+     
+
+        .row1{
+            // width: 100%;
+            // height: 80%;
+            // padding-top: 5%;
+            @include width_height_padding(100%, 80% , false, 'top' , 5%);
+            display: flex;
+
+            .subtitle{
+                font-size: $desktop-heading2;
+            
+            }
+        
+
+            .row1Box1{
+
+                // width: 30%;
+                // padding-left: 5%;
+                // height: 100%;
+                @include width_height_padding(30%, 100% , false, 'left' , 5%);
+              
+    
+                .row1-title{
+
+                    font-size: $desktop-heading1;
+                  
+                }
+
+                .row1-subtitle {
+                    font-size: $desktop-heading3;
+               
+                }
+
+            }
+
+            .row1Box2{
+
+                width: 800px;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+           
+                .box1Left{
+                    // width: 70%;
+                    // height: 70%;
+                    // padding: 20px;
+                    @include width_height_padding(70%, 70% , 20px);
+                    box-sizing: border-box;
+                    background-color: $red;    
+                }
+
+                .box1Right{
+                    width: 30%;
+                    height: 70%;
+                    
+                    .box1RightTop{
+                        // width: 100%;
+                        // height: 50%;
+                        // padding: 20px;
+                        @include width_height_padding(100%, 50% , 20px);
+                        box-sizing: border-box;
+                        background-color: $dark-purple;
+                    }
+
+                    .box1RightBottom{
+                        // width: 100%;
+                        // height: 50%;
+                        @include width_height_padding(100%, 50%);
+                        
+                    }
+
+                    .box1RightBottom-text{
+                        position: relative;
+                        left: 100%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        margin-top: 0px;
+                        font-size: $desktop-heading2
+                        
+                    }
+                
+                }
+
+            }
+
+            .row1Box3{
+                width: 100%;
+                height: 30%;
+                display: flex;
+                background-color: red;
+                
+                .box3Left{
+                    // width: 35%;
+                    // height: 100%;
+                    // padding: 20px;
+                    @include width_height_padding(35%, 100%, 20px);
+                    background-color: $medium-blue;
+                }
+
+                .box3Right{
+                    // width: 65%;
+                    // height: 100%;
+                    // padding: 20px;
+
+                    @include width_height_padding(65%, 100%, 20px);
+                    background-color: $yellow;
+                }
+            }
+
+    
+        }
+
+        .row2{
+
+            width: 100%;
+            height: 100%;
+            background-color: red;
+        }
+
+        .font-color{
+            color: #fff;
+        }
+    }
+
+    #aside-menu{
+        width:15%;
+        height: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        right: -15%;
+
+        ul{
+            list-style: none;
+        }
+
+    }
+
+    .grey {
+        background-color: $grey;
+    }
+
+    .grey-font {
+        color: $grey;
+    }
+
+    .white-color{
+        color: #fff;
+    }
+
+    .red-dot{
+        color: red;
+    }
+
+      .section2{
+        width: 90%;
+        height: 100vh;  
+        position: relative;
+      
+        @extend %center-margin;
+        margin-top: 40px;
+
+  
+
+        .title1-boxes{
+            position: absolute;
+            top: 50%;
+            display:flex;
+            flex-wrap: wrap;
+            height: 70%;
+            transform: translateY(-50%);
+            width: 100%;
+            background-color: $dark-purple;
+        
+        }
+
+        .title1-box{
+
+            width: 45%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .title1-image{
+            height: 70%;
+        }
+
+        .title1-text{
+            font-size: $desktop-heading3;
+            text-align: left;
+        }
+
+        .title1{
+            color: $yellow;
+        }
+      }
+
+      .section3{
+        width: 100%;
+        height: 100vh;
+        margin-top: 40px;
+
+        .title2-images{
+            height: 50%;
+            background-color: $light-blue;
+            display: flex;
+            flex-wrap: wrap;
+  
+            .title2-image{
+                text-align: center;
+                width: (100%/3);
+                position: relative;
+            }
+
+            .title2-text{
+                width: 200px;
+                margin: 0 auto;
+                margin-top: 200px;
+            }
+
+        }
+
+        .dot{
+            width: 180px;
+            height: 160px;
+            border-left: 1px dotted black;
+            position: absolute;
+            top: 90px;
+            left: 50%;
+            transform: translateY(-50%);
+        }
+      }
+
+      .section4{
+        width: 70%;
+        height: 50vh;
+        @extend %center-margin;
+        margin-top: 40px;
+        border-top: 1px solid $grey;
+        position: relative;
+
+        .section4-image{
+            text-align: right;
+            position: absolute;
+            top: 70px;
+            right: 180px;
+        }
+
+        .section4-inner{
+            width: 70%;
+            padding: 80px;
+            margin: 0 auto;
+        }
+
+        .section4-text{
+            position: absolute;
+            top: 70px;
+            font-size: $desktop-heading2;
+        }
+
+        .section4-button{
+            padding: 10px;
+            background-color: $red;
+            color: #fff;
+            margin-top: 200px;
+
+        }
+      }
+
+      .title{
+        font-size: $desktop-heading2;
+        @extend %text-center-title;
+    }
+
+    .footer{
+        height: 50vh;
+        width: 100%;
+        background-color: $dark-blue;
+
+        .contact{
+
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+           
+        }
+
+        .contact-box{
+
+            width: (100% / 3);
+            padding: 70px 120px;
+            font-size: $desktop-heading6;
+
+        }
+
+        .icons{
+            display: flex;
+            align-items:center;
+        }
+
+        .text-contact{
+            margin-right: 20px;
+        }
+
+        .label{
+            padding-bottom: 35px;
+        }
+
+        .footer-button{
+            padding: 10px;
+            background-color: $yellow;
+            margin-top: 30px;
+            float:right;
+        }
+    }
+ 
+    
+}
+
+
+
